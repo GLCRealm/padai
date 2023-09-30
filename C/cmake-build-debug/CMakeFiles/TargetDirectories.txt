@@ -1,0 +1,12 @@
+D:/codes/C/cmake-build-debug/CMakeFiles/C.dir
+D:/codes/C/cmake-build-debug/CMakeFiles/linkdelist.dir
+D:/codes/C/cmake-build-debug/CMakeFiles/ansh.dir
+D:/codes/C/cmake-build-debug/CMakeFiles/f.dir
+D:/codes/C/cmake-build-debug/CMakeFiles/hello.dir
+D:/codes/C/cmake-build-debug/CMakeFiles/fghjk.dir
+D:/codes/C/cmake-build-debug/CMakeFiles/learnlinkedlist.dir
+D:/codes/C/cmake-build-debug/CMakeFiles/DSA.dir
+D:/codes/C/cmake-build-debug/CMakeFiles/code.dir
+D:/codes/C/cmake-build-debug/CMakeFiles/work.dir
+D:/codes/C/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/codes/C/cmake-build-debug/CMakeFiles/rebuild_cache.dir
