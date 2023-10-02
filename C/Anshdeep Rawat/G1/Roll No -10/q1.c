@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-void main()
+int main()
 {
     int i, num, b = 0, c = 0, a[100];
-    printf("Enter the value of numbers\n");
+    printf("Enter the number of elements\n");
     scanf("%d", &num);
     for (i = 0; i < num; i++)
         scanf("%d", &a[i]);
