@@ -1,73 +1,36 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-#define MAX_STACK_SIZE 100
-
-typedef struct {
-    int stack[MAX_STACK_SIZE];
-    int top;
-} Stack;
-
-void initializeStack(Stack *s) {
-    s->top = -1;
-}
-
-int isFull(Stack *s) {
-    return s->top == MAX_STACK_SIZE - 1;
-}
-
-int isEmpty(Stack *s) {
-    return s->top == -1;
-}
-
-void push(Stack *s, int data) {
-    if (isFull(s)) {
-        printf("Stack is full. Cannot push element.\n");
-        return;
+#include<stdio.h>
+ 
+int print(int a[], int b[], int c, int d)
+{
+  int i = 0, j = 0;
+  while (i < c && j < d)
+  {
+    if (a[i] < b[j])
+      printf(" %d ", a[i++]);
+    else if (b[j] < a[i])
+      printf(" %d ", b[j++]);
+    else
+    {
+      printf(" %d ", b[j++]);
+      i++;
     }
-    s->top++;
-    s->stack[s->top] = data;
+  }
+ 
+ 
+  while(i < c)
+   printf(" %d ", a[i++]);
+  while(j < d)
+   printf(" %d ", b[j++]);
 }
+ 
 
-int pop(Stack *s) {
-    if (isEmpty(s)) {
-        printf("Stack is empty. Cannot pop element.\n");
-        return -1; 
-    }
-    int data = s->stack[s->top];
-    s->top--;
-    return data;
-}
-
-int peek(Stack *s) {
-    if (isEmpty(s)) {
-        printf("Stack is empty.\n");
-        return -1; 
-    }
-    return s->stack[s->top];
-}
-
-int main() {
-    Stack stack;
-    initializeStack(&stack);
-
-    
-    push(&stack, 10);
-    push(&stack, 20);
-    push(&stack, 30);
-
-   
-    printf("Top element: %d\n", peek(&stack));
-
-    
-    printf("Popping elements:\n");
-    while (!isEmpty(&stack)) {
-        printf("%d\n", pop(&stack));
-    }
-
-    
-    printf("Trying to pop from an empty stack:\n");
-    printf("%d\n", pop(&stack));
-
-    return 0;
-}
+int main()
+{
+  int a[] = {1, 2, 4, 5, 6};
+  int b[] = {2, 3, 5, 7};
+  int c = sizeof(a)/sizeof(a[0]);
+  int d = sizeof(b)/sizeof(b[0]);
+  print(a, b, c, d);
+  getchar();
+  return 0;
+ }
