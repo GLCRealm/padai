@@ -40,6 +40,7 @@
 
 
 
+
 // #include <iostream>
 // #include <cstring>
 
@@ -123,7 +124,7 @@ int main(){
 
     A obj;
     // A obj2;
-    
+
     obj.A(2);
 
 
