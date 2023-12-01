@@ -53,6 +53,7 @@ void pos_neg(struct node** head){
             itr=itr->next;
         }
     }
+
     else{ 
         n=itr; 
         itr=itr->next;
@@ -64,6 +65,7 @@ void pos_neg(struct node** head){
             }
             itr=itr->next;
         }
+        
     }
     itr=(*head);
     

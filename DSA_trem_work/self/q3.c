@@ -62,23 +62,22 @@ void arrange(struct node **head,int val){
     }
     itr=(*head);
     
-    //this loop will help to resolve prob with value which is out of scope
+    //this loop will help to all numbers which are bigger orequal
     while(itr!=NULL){
+        
         if(itr->data==val){
             ptr->data=val;
             ptr=ptr->next;
+            itr=itr->next;
         }
-        itr=itr->next;
-    }
-    itr=(*head);
 
-    while(itr!=NULL){
         if(itr->data>val){
             ptr->data=itr->data;
             ptr=ptr->next;
         }
         itr=itr->next;
     }
+    itr=(*head);
 
     ptr=newnode;
     printf("the Arranged linkedlist is :-\n");
@@ -108,17 +107,31 @@ void printlist(struct node **head){
     printf("\n");
 };
 
+void insertnodes(struct node ** head,int a){
+
+    printf("enter the 1 element for linked list :-\n");
+    int b;
+    scanf("%d",&b);
+    (*head)=createnode(b);
+    struct node*itr=(*head);
+
+    for(int i=2;i<=a;i++){
+        printf("enter the %d element for linked list :-\n",i);
+        int c;
+        scanf("%d",&c);
+        itr->next=createnode(c);
+        itr=itr->next;
+    }
+}
+
 int main(){
     
-    struct node*head=createnode(2);
-    struct node*itr=head;
+    struct node*head=NULL;
     int a;
 
-    head->next=createnode(4);
-    head->next->next=createnode(7);
-    head->next->next->next=createnode(3);
-    head->next->next->next->next=createnode(9);
-    head->next->next->next->next->next=createnode(1);
+    printf("Enter the no of elements in list:-\n");
+    scanf("%d",&a);
+    insertnodes(&head,a);
 
     printf("enter the Partition number (V):-\n");
     scanf("%d",&a);

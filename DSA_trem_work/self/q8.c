@@ -127,6 +127,7 @@ int main(){
     printlist(&head,a);
     printlist(&head2,b);
 
+    printf("\nThe added expression is:-\n");
     polyadd(&head,&head2,a,b);
 
 }

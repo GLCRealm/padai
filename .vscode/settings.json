@@ -2,7 +2,9 @@
     "files.associations": {
         "iostream": "cpp",
         "HI.C": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "*.tcc": "cpp",
+        "istream": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
     "cmake.sourceDirectory": "/workspaces/padai/C"

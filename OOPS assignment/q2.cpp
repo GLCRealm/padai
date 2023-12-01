@@ -1,37 +1,19 @@
+// Main.cpp - Main program
+
 #include<iostream>
+#include "HEDDER.h"
+
 using namespace std;
+using namespace world;
 
-class A{
-    public:
-    int a;
-    int  *ptr;
+int main() {
+    cout << "Accessing the variable from namespace: " << a << endl;
+    method();
 
-    void data(int x, int y){
-        a=x;
-        ptr=new int;
-        *ptr= y;
-    }
-
-    void print(){
-        cout<<a<<endl;
-        cout<<*ptr<<endl;
-    }
-
-    A(){
-        a=d.a;
-        p=d.p;
-    }
-
-};
-
-int main(){
-    A obj;
-
-    obj.data(10,20);
-    obj.print();
-
-    A obj2;
-    obj2.print();
-
-    
+    return 0;
 }
+
+// g++ -c HEDDER.cpp   // Compile the implementation file
+// g++ -c Main.cpp     // Compile the main file
+// g++ HEDDER.o Main.o -o YourProgramName  // Link the object files into an executable
+// ./YourProgramName 

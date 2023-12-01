@@ -1,4 +1,7 @@
-        // if(itr2!=NULL){
-        //     b=b*10+itr->data;
-        //     itr2=itr2->next;
-        // }
+while(itr!=NULL){
+    //     if(itr->data>val){
+    //         ptr->data=itr->data;
+    //         ptr=ptr->next;
+    //     }
+    //     itr=itr->next;
+    // }
