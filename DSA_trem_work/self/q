@@ -1,0 +1,42 @@
+void polyadd(struct node** head,struct node **head2){
+
+    struct node*itr=(*head);
+    struct node*itr2=(*head2);
+    struct node*find1=(*head);
+    struct node*find2=(*head2);
+    struct node* newhead=NULL;
+
+    int count1=0;
+    int count2=0;
+    
+    while(itr){
+        count1++;
+        itr=itr->next;
+    }
+    while(itr){
+        count2++;
+        itr2=itr2->next;
+    }
+    itr=(*head);
+    itr2=(*head2);
+
+    // printf("%d\n",itr->coff);
+    // printf("%d\n",itr2->coff);3
+    
+    
+    struct node* ptr=newhead=createnode(itr->coff+itr2->coff,itr->exp);
+    itr=itr->next;
+    itr2=itr2->next;
+
+    while(itr){
+        if(count1==count2){
+            ptr->next=createnode(itr->coff+itr2->coff,itr->exp);   
+            ptr=ptr->next;
+        }
+        itr=itr->next;
+        itr2=itr2->next;
+    }
+
+    printlist(&newhead);
+
+}
