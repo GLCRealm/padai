@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css? family-Inter:400");
+
+:root {
+    --black: rgba(0, 0, 0, 1);
+    --copper-rust: rgba(143, 71, 71, 1);
+    --white:rgba(255, 255, 255, 1);
+
+    --font-size-m: 32px;
+    --font-size-1: 128px;
+    --font-size-1: 96px;
+
+    --font-family-inter: "Inter";
+}
+
+/* Classes */
+
+.inter-normal-white-32px {
+    color: var(--white);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    font-style: normal
+}
+
+
+
+.desktop-1 {
+    align-items: flex-start;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 254px;
+    height: 1024px;
+    margin-top: 4px;
+    padding: 77px 153px;
+    width: 1440px;
+}
+
+.overlap-group-container {
+    align-items: flex-start;
+    display: flex;
+    gap: 303px;
+    min-width: 1061px;
+}
+
+.overlap-group1 {
+    align-items: flex-start;
+    padding: 35px 53px;
+}
+
+.desktop-2.overlap {
+    background-color: var(--copper-rust);
+    border-radius: 80px;
+    display: flex;
+    height: 126px;
+    min-width: 379px;
+}
+
+.print-data {
+    letter-spacing: 0;
+    line-height: normal;
+    min-height: 39px;
+    text-align: center;
+    width: 272px;
+}
+
+.overlap-group {
+    align-items: center;
+    padding: 0 53px;
+}
+
+.add-a-new-registration {
+    letter-spacing: 0;
+    line-height: normal;
+    min-height: 78px;
+    text-align: center;
+    width: 272px;
+}
+
+.car-registration-on-blockchain {
+    align-self: center;
+    color: var(--black);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-1);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: 1px;
+    min-height: 348px;
+    text-align: center;
+    width: 987px;
+}

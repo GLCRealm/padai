@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Frontend</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Add New Registration</h2>
+    <form id="addForm">
+        <label for="data_name">Name:</label>
+        <input type="text" id="data_name" name="data_name" required><br>
+
+        <label for="data_car_number">Vehicle Number:</label>
+        <input type="text" id="data_car_number" name="data_car_number" required><br>
+
+        <!-- Add more fields as needed -->
+
+        <button type="button" onclick="addData()">Submit</button>
+    </form>
+
+    <h2>Search Data by Unique ID</h2>
+    <form id="searchForm">
+        <label for="unique_id">Unique ID:</label>
+        <input type="text" id="unique_id" name="unique_id" required><br>
+
+        <button type="button" onclick="searchData()">Search</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function addData() {
+            // Fetch form data and send to the backend
+            // You can use JavaScript Fetch API or any other method to send data to your backend
+            // Example using Fetch API:
+            const formData = new FormData(document.getElementById('addForm'));
+
+            fetch('your_backend_endpoint_for_add', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Data added successfully!');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
+        function searchData() {
+            const uniqueId = document.getElementById('unique_id').value;
+
+            // Fetch data based on unique ID from the backend
+            // Example using Fetch API:
+            fetch(`your_backend_endpoint_for_search?unique_id=${uniqueId}`)
+            .then(response => response.json())
+            .then(data => {
+                // Display the result in the 'result' div
+                document.getElementById('result').innerHTML = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+
+</body>
+</html>
